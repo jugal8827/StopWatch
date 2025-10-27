@@ -1,12 +1,31 @@
-# React + Vite
+# React Stopwatch Application
+A high-precision stopwatch built with React utilizing modern hooks (useState, useEffect, and useRef) for optimized performance and accurate time tracking. The application provides a clean and intuitive interface to Start, Stop, and Reset the timer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Key Features
+- High-accuracy timer with millisecond precision
+- Robust state management using React Hooks
+- Maintains elapsed time on resume
+- Efficient interval handling using useRef
+- Modular and reusable stopwatch component
 
-Currently, two official plugins are available:
+## Technologies Used
+- React : Frontend UI Framework
+- Javascript : Logic and component functionality
+- CSS : Basic styling and layout
+- HTML/JSX : Component structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Component Overview
+The stopwatch uses Date.now() to compute real-time differences rather than relying solely on interval counts, which ensures accurate timing.
+- useState manages running state and elapsed duration
+- useRef persists interval ID and starting timestamp across renders
+- useEffect handles creation and cleanup of the timing interval
+Time is formatted into the standard format:
+- MM:SS:MS → Minutes : Seconds : Milliseconds
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+- Clone the repository
+- Navigate to project directory
+- Install Dependencies
+  - npm install
+- Start development server
+  - npm start
